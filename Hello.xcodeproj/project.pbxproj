@@ -31,6 +31,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		184E327B20030FAE00E03D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E327A20030FAE00E03D5A /* Foundation.framework */; };
 		OBJ_1012 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1018 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Package.swift */; };
 		OBJ_1024 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Package.swift */; };
@@ -6124,6 +6125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184E327A20030FAE00E03D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		"Auth::Authentication::Product" /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Auth::Authorization::Product" /* Authorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AuthProvider::AuthProvider::Product" /* AuthProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6920,6 +6922,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		184E327820030F9A00E03D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184E327B20030FAE00E03D5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_1193 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -7941,6 +7951,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184E327920030FAD00E03D5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184E327A20030FAE00E03D5A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_110 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
@@ -9046,7 +9064,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -9057,8 +9075,8 @@
 				OBJ_46 /* Resources */,
 				OBJ_47 /* Dependencies */,
 				OBJ_956 /* Products */,
+				184E327920030FAD00E03D5A /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_502 /* View */ = {
@@ -11278,6 +11296,7 @@
 			buildConfigurationList = OBJ_1008 /* Build configuration list for PBXNativeTarget "HelloPackageDescription" */;
 			buildPhases = (
 				OBJ_1011 /* Sources */,
+				184E327820030F9A00E03D5A /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -12361,7 +12380,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_956 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

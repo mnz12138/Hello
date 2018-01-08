@@ -1,4 +1,5 @@
 import Vapor
+import Foundation
 
 extension Droplet {
     
@@ -19,7 +20,13 @@ extension Droplet {
             // [Part]? from multipart/mixed
             let multipartMixedData = request.multipart
             
-            let field = multipartFormData["imgfile"]
+            guard let field = multipartFormData["imgfile"],
+                let count = field.bytes?.count else {
+                throw Abort.badRequest
+            }
+            let data = NSData(bytes: field.bytes, length: count)
+            let path = NSHomeDirectory()+"/Desktop/imgfile.png"
+            data.write(toFile: path, atomically: true)
             
             let response = try Response(status: .ok, json: JSON("success"))
             //响应头加入自定义值
