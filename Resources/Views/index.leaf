@@ -1,0 +1,9 @@
+#(greeting)
+#raw(greeting)
+#if(entering) {
+    Hello, there!
+} ##if(leaving) {
+    Goodbye!
+} ##else() {
+    I've been here the whole time.
+}

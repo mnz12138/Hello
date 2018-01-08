@@ -1,0 +1,11 @@
+{
+    "allowedOrigin": "*",
+    "allowedMethods": [ "GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH" ],
+    "allowedHeaders": [
+        "Accept",
+        " ",
+        "Content-Type",
+        "Origin",
+        "X-Requested-With"
+    ]
+}
