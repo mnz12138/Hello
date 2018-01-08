@@ -36,9 +36,9 @@ extension Config {
         try addProvider(MySQLProvider.Provider.self)
         //Config/droplet.json ("cache": "redis")
         try addProvider(RedisProvider.Provider.self)
-        //
+        //认证
         try addProvider(AuthProvider.Provider.self)
-        //使用Leaf view渲染器
+        //使用Leaf view渲染器 Config/droplet.json ["view": "leaf"]
         try addProvider(LeafProvider.Provider.self)
         
         //版本中间件 droplet.json ("middleware": ["version"])
