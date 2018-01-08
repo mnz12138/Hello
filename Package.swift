@@ -19,7 +19,6 @@ let package = Package(
         .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0")),
         .package(url: "https://github.com/vapor/validation-provider.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/vapor/debugging.git", .upToNextMajor(from: "1.1.1")),
-//        .package(url: "https://github.com/vapor-community/mustache-provider.git", .upToNextMajor(from: "0.11.0")),
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor", "FluentProvider", "MySQLProvider", "RedisProvider", "AuthProvider", "LeafProvider", "ValidationProvider", "Debugging"],

@@ -32,6 +32,7 @@
 
 /* Begin PBXBuildFile section */
 		184E327B20030FAE00E03D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E327A20030FAE00E03D5A /* Foundation.framework */; };
+		184E32812003207000E03D5A /* NameValidationSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E32802003207000E03D5A /* NameValidationSuite.swift */; };
 		OBJ_1012 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1018 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Package.swift */; };
 		OBJ_1024 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Package.swift */; };
@@ -6126,6 +6127,7 @@
 
 /* Begin PBXFileReference section */
 		184E327A20030FAE00E03D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		184E32802003207000E03D5A /* NameValidationSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidationSuite.swift; sourceTree = "<group>"; };
 		"Auth::Authentication::Product" /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Auth::Authorization::Product" /* Authorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AuthProvider::AuthProvider::Product" /* AuthProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -7957,6 +7959,14 @@
 				184E327A20030FAE00E03D5A /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		184E327F2003206400E03D5A /* ValidationSuite */ = {
+			isa = PBXGroup;
+			children = (
+				184E32802003207000E03D5A /* NameValidationSuite.swift */,
+			);
+			path = ValidationSuite;
 			sourceTree = "<group>";
 		};
 		OBJ_110 /* Tag */ = {
@@ -9946,6 +9956,7 @@
 		OBJ_8 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				184E327F2003206400E03D5A /* ValidationSuite */,
 				OBJ_9 /* Controllers */,
 				OBJ_12 /* Middleware */,
 				OBJ_15 /* Models */,
@@ -12752,6 +12763,7 @@
 				OBJ_1462 /* Routes.swift in Sources */,
 				OBJ_1463 /* Config+Setup.swift in Sources */,
 				OBJ_1464 /* Droplet+Setup.swift in Sources */,
+				184E32812003207000E03D5A /* NameValidationSuite.swift in Sources */,
 				OBJ_1465 /* HTTP+Extension.swift in Sources */,
 				OBJ_1466 /* Request+Authentication.swift in Sources */,
 				OBJ_1467 /* Response+Extension.swift in Sources */,

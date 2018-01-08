@@ -1,9 +1,12 @@
 import Vapor
 import MySQL
+import ValidationProvider
 
 extension Droplet {
     
     func setupRoutes() throws {
+        let nameValidationSuite = NameValidationSuite()
+        
         let userGroup = grouped("v1", User.parameter)
         
         get("hello") { req in
@@ -108,6 +111,8 @@ extension Droplet {
             guard let user_name = request.data["user_name"]?.string else{
                 throw Abort.badRequest
             }
+            //自定义验证
+            try nameValidationSuite.validate(user_name)
             let userId = try UserManager.save(username: user_name)
             let dict = ["user_id": userId]
             let node = try dict.makeNode(in: nil)
@@ -150,6 +155,14 @@ extension Droplet {
             guard let key = request.data["key"]?.string,
                 let value = request.data["value"]?.string else{
                 throw Abort.badRequest
+            }
+            if value.passes(Count.min(1))==false {
+                var json = JSON([:])
+                try json.set("error", true)
+                try json.set("message", "存储值长度最少1位")
+                let response = Response(status: .badRequest)
+                response.json = json
+                return response
             }
             //30秒过期
 //            self.cache.set(key, value, expiration: Date(timeIntervalSinceNow: 30))

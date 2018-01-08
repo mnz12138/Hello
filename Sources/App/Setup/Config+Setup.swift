@@ -4,14 +4,13 @@ import MySQLProvider
 import RedisProvider
 import AuthProvider
 import LeafProvider
-//import VaporMustache
 
 extension Config {
     public func setup() throws {
         // allow fuzzy conversions for these types
         // (add your own types here)
         Node.fuzzy = [Row.self, JSON.self, Node.self]
-
+        
         try setupProviders()
         try setupPreparations()
     }
@@ -41,9 +40,6 @@ extension Config {
         try addProvider(AuthProvider.Provider.self)
         //使用Leaf view渲染器
         try addProvider(LeafProvider.Provider.self)
-        
-        //可以返回模板视图
-//        try addProvider(VaporMustache.Provider.self)
         
         //版本中间件 droplet.json ("middleware": ["version"])
         addConfigurable(middleware: VersionMiddleware(), name: "version")
