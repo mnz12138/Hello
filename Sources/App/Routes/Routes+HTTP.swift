@@ -33,7 +33,6 @@ extension Droplet {
             response.headers.customKey = "123"
             return response
         }
-        
     }
     
 }
